@@ -10,7 +10,8 @@ module.exports = function(grunt) {
           'public/components/angular/angular.js',
           'public/components/angular-route/angular-route.js',
           'public/components/jquery/dist/jquery.js',
-          'public/javascripts/**/*.js',
+          'public/components/bootstrap/dist/js/bootstrap.min.js',
+          'public/javascripts/**/*.js'
         ],
       }
     }

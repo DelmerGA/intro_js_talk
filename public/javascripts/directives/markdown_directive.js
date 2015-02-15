@@ -1,4 +1,4 @@
-(function (markdown, $) {
+(function (markdown) {
   "use strict";
 
   this.directive("markdown", ["$http", function($http) {
@@ -25,4 +25,4 @@
       return new MD();
   }]);
 
-}).apply(require("./index.js"),[require("marked"), require("../../components/jquery/dist/jquery.js")])
+}).apply(require("./index.js"),[require("marked")])
