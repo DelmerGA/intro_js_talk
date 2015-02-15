@@ -3,7 +3,8 @@
   
   var app = angular.module("app", [
     "app.router",
-    "app.controllers"
+    "app.controllers",
+    "app.directives"
   ]);
 
   module.exports = {

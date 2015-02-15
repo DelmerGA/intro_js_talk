@@ -7,12 +7,19 @@
 
     <title>Intro JavaScript</title>
 
+    <link rel="stylesheet" type="text/css" href="public/stylesheets/themes/prism.css">
     <link href="public/stylesheets/app.min.css" rel="stylesheet">
-    <script src="public/javascripts/index.js"></script>
   </head>
   <body ng-app="app">
-    <div ng-controller="main as main">
-      <div ng-include="main.navUrl"></div>
-      <ng-view></ng-view>
+      <div ng-controller="main as m">
+
+        <div ng-include="m.navUrl"></div>
+
+        <div class="container view-body">
+          <div ng-view></div>
+        </div>
+      </div>
+ 
   </body>
+  <script src="public/javascripts/index.js"></script>
 </html>

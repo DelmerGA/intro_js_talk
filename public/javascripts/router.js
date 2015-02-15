@@ -16,7 +16,8 @@
       })
       .when("/examples/:id", {
         templateUrl: "views/examples.html",
-        controller: "examples"
+        controller: "examples",
+        controllerAs: "examples as ex"
       });
   }
   

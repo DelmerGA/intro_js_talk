@@ -1,7 +1,7 @@
 (function () {
 
   function Main($scope, $routeParams) {
-    this.navUrl = 'partials/navbar.html';
+    this.navUrl = 'views/partials/navbar.html';
   };
 
   Main.$inject = [

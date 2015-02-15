@@ -9,6 +9,7 @@ module.exports = function(grunt) {
         'public/javascripts/index.js': [
           'public/components/angular/angular.js',
           'public/components/angular-route/angular-route.js',
+          'public/components/jquery/dist/jquery.js',
           'public/javascripts/**/*.js',
         ],
       }
@@ -19,8 +20,8 @@ module.exports = function(grunt) {
     combine: {
       files: {
         'public/stylesheets/app.min.css': [
-          'public/stylesheets/**/*.css',
-          'public/components/**/bootstrap.css'
+          'public/components/**/bootstrap.css',
+          'public/stylesheets/**/*.css'
         ]
       }
     }

@@ -1,5 +1,8 @@
 (function () {
-  function Examples($scope, $routeParams) {};
+  function Examples($scope, $routeParams) {
+    this.id = $routeParams.id;
+    $scope.route = "notes/"+ this.id;
+  };
 
   Examples.$inject = [
                                   "$scope", 
