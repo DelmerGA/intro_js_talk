@@ -11,6 +11,7 @@ We will be exploring the world of JavaScript through a couple different lenses.
     * [Control Flow](#examples/js_control_flow)
     * [Intro Functions](#examples/intro_functions)
     * [Intro DOM Events](#examples/intro_dom_events)
+  * [jQuery Resources](#examples/intro_jquery)
 
 ### Description
 
