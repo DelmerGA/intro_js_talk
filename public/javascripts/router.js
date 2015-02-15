@@ -14,6 +14,10 @@
         templateUrl: "views/home.html",
         controller: "home"
       })
+      .when("/beginner", {
+        templateUrl: "views/beginner.html",
+        controller: "beginner"
+      })
       .when("/examples/:id", {
         templateUrl: "views/examples.html",
         controller: "examples",
