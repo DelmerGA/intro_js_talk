@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bootstrap</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+  <script src="https: //code.jquery.com/jquery-1.11.2.min.js"></script>
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+  <style type="text/css">
+    .left {
+      background-color: blue;
+      color: white;
+    }
+    .right {
+      background-color: orange;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="dropdown">
+  <button id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Dropdown trigger
+    <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+    <li>Here I am</li>
+  </ul>
+</div>
+
+
+
+
+
+  <!-- Just to contain the rows and cols of the html -->
+  <div class="container">
+    <!-- The rows are so that you can start to build your content vertically and define the width of cols -->
+    <div class="row">
+      <!-- xs stands for extra small, i.e. mobile devices -->
+      <div class="col-xs-6 col-xs-offset-3 right">
+        Hello world
+      </div>
+   </div>
+   <div class="row">
+      <div class="col-xs-3 left">
+        New Row
+      </div>
+   </div>
+  </div>
+
+
+
+
+
+
+
+</body>
+</html>
