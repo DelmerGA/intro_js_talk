@@ -25,4 +25,23 @@ This class is for students with little to no experience with Javascript who need
 | Learn to utilize common JS libraries: underscore, jQuery, etc. | 
 | Learn to apply concepts through examples and problem solving |
 
+## Sublime
+
+If you don't have sublime installed then you'll want to begin installing now. Once finished, check if the following command works in terminal
+
+```bash
+sublime
+```
+
+If that opens a sublime editor then you're ready to go. Otherwise we will just use the following command.
+
+```bash
+open -a "Sublime Text 3" .
+```
+
+You can also just drag a folder from finder over your sublime icon and have it open the project.
+
+For more information see this great stack overflow.
+
+[sublime cli](http://stackoverflow.com/questions/19543643/sublime-text-3-and-terminal-prompt-for-os-x-mavericks)
 
