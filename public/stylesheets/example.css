@@ -1,0 +1,13 @@
+.example {
+  background-color: white;
+  padding: 10px;
+}
+
+.example .ex-title {
+  font-weight: bold;
+  color: red;
+  padding-bottom: 10px;
+}
+.example .ex-box {
+  border: solid 1px black;
+}

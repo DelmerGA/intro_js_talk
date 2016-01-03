@@ -1,7 +1,6 @@
-## Checkout It Out
+## Wireframe Challenges
 
-
-The Grid System
+Use the grid
 
 [Boostrap Grid](http://getbootstrap.com/css/#grid)
 

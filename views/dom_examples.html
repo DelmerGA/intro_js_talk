@@ -1,0 +1,130 @@
+<div class="row">
+  <div class="col-xs-12 col-sm-3 sidebar">
+    <div markdown src="views/partials/outline"></div>
+  </div>
+
+  <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-md-offset-2">
+    <div class="row">
+      <div class="col-xs-12 notes">
+        <h2>DOM Examples</h2>
+
+        <p>To begin playing with the DOM in JavaScript/jQuery we are going to play with a simple example using boxes.</p>
+
+        <ul>
+          <li>
+            <p>Start by creating a <code>boxes_example</code> project folder on your desktop. Open the project in sublime.</p>
+          </li>
+
+          <li>
+            <p>Create a file called <code>boxes.html</code> in the project folder.</p>
+          </li>
+          <li>
+            <p>Create a folder called <code>public</code> in the project folder.</p>
+            <ul>
+              <li>
+                <p>In the <code>public</code> folder create a <code>stylesheets</code> folder.</p>
+                <ul>
+                  <li>In the <code>stylesheets</code> folder create a <code>boxes.css</code> file</li>
+                </ul>
+              </li>
+
+              <li>
+                <p>In the <code>public</code> folder create a <code>javascripts</code> folder.</p>
+              </li>
+
+              <ul>
+                <li>In the <code>javascripts</code> folder create a <code>jquery.js</code> file.</li>
+                <li>In the <code>javascripts</code> folder create a <code>boxes.js</code> file.</li>
+              </ul>
+            </ul>
+          </li>
+        </ul>
+
+
+        Now that you created your project structure let's add some content.
+
+        <ul>
+          <li>
+            <p>In your <code>index.html</code> paste the following</p>
+
+            <pre prism-pre data-src="examples/dom_examples/boxes.html"></pre>
+          </li>
+
+          <li>
+            <p>In your <code>public/stylesheets/boxes.css</code> paste the following:</p>
+
+            <pre prism-pre data-src="examples/dom_examples/public/stylesheets/boxes.css"></pre>
+          </li>
+
+          <li>
+            <p>In your <code>public/javascripts/boxes.js</code> paste the following</p>
+
+            <pre prism-pre data-src="examples/dom_examples/public/javascripts/boxes.js"></pre>
+          </li>
+
+          <li>
+            <p>Copy and paste this <a href="http://code.jquery.com/jquery-1.11.2.js">jquery content</a> into your <code>public/javascripts/jquery.js</code></p>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-12 notes">
+        <h4>Boxes Initial Solution</h4>
+        <button ng-click="boxSolShow = !boxSolShow">Show/Hide</button>
+        <ul ng-show="boxSolShow">
+
+          <li>
+            <p>In your <code>public/javascripts/boxes.js</code> you should have something like</p>
+
+            <pre prism-pre data-src="examples/dom_examples/public/javascripts/boxes_solution.js"></pre>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-xs-12 notes">
+        <h4>Boxes And Forms</h4>
+
+        Now Let's use this slightly different html and to spice up our example.
+
+        <ul>
+          <li>
+            <p>Create a <code>box_forms.html</code> with the following html</p>
+
+            <pre prism-pre data-src="examples/dom_examples/boxes_forms.html"></pre>
+          </li>
+
+          <li>
+            <p>Create a <code>public/javascripts/box_forms.js</code> with the following</p>
+
+            <pre prism-pre data-src="examples/dom_examples/public/javascripts/box_forms.js"></pre>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-xs-12 notes">
+        <h4>Box Forms Initial Solution</h4>
+        <button ng-click="boxFormsSolShow = !boxSolShow">Show/Hide</button>
+        <ul ng-show="boxFormsSolShow">
+
+          <li>
+            <p>In your <code>public/javascripts/box_forms.js</code> you should have something like</p>
+
+            <pre prism-pre data-src="examples/dom_examples/public/javascripts/box_forms_solution.js"></pre>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+
+  </div>
+</div>
+

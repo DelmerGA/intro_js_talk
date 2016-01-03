@@ -30,3 +30,22 @@ h2 {
 .table {
   border: 1px solid rgba(0,0,0,.2);
 }
+
+.sidebar {
+
+}
+
+@media (min-width: 968px) {
+  .sidebar {
+    position: fixed;
+    top: 51px;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    display: block;
+    width: 15%;
+    overflow-x: hidden;
+    overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+    background-color: #95a5a6;
+  }
+}

@@ -4,8 +4,8 @@
 
 | Objectives |
 | :---- |
-|   Identify and discuss boolean operators and truthyness |
-|   Apply different boolean operators with objects in conditional statements |
+| Identify and discuss boolean operators and truthyness |
+| Apply different boolean operators with objects in conditional statements |
 | Discuss and apply loops and iterators using conditional statements |
 
 
@@ -15,32 +15,32 @@
   * Logical Operators
     * `&&`, `||`, and `!`
     * comparisons
-    * truthy and falsey   
+    * truthy and falsey
   * Conditionals (if/else)
-    * short circuit 
+    * short circuit
     * Ternary operator
   * For iterator
     * What is iterating? Compute with for loops: factorial, repeating 50 times.
-    * `for` 
+    * `for`
     * `for ... in`
   * While loop
     * generic condition
   * Switch case
-  
+
 ------
 
 ### Self Assessment
 
 * **Fiz-Buzz**
   *  For each number from `1` to `100`  print the following: `fizz` if it is a multiple of `3`, `buzz` if it is a multiple of `5`, and `fizzbuzz` it is a multiple of both.
-  
+
 -----
 
 ### Logical Operators
 
 There are two types of binary operators that work with booleans, (a binary operator just requires two arguments.)
 
-* **AND**, denoted `&&` 
+* **AND**, denoted `&&`
 * **OR**, denoted `||`
 
 
@@ -53,7 +53,7 @@ There is a third unary operatory, (a unary operator that requirs just one argume
 Quick Notes:
 
 * The `&&` operator requires both left and right values to be `true` to return `true`, i.e.
-  
+
   ````
     true && true //=> true
   ````
@@ -61,45 +61,45 @@ and any other combination is false.
 
 * The `||` operator requires just one of the left or right values to be `true` to return true.
   * Only `false || false` will return `false`
-  
+
 * The `!` takes a value and returns the opposite boolean value, i.e. ` !(true) //=> false`.
-  
+
 
 ### Comparisons
 
-To compare two values in Javascript for equality testing we use `===`, which will check the sameness of the thing on the left with the thing on the right. Note sameness is a very fuzzy word, and thus, `===` is also very fuzzy concept, which should be approached with caution in every language. 
+To compare two values in Javascript for equality testing we use `===`, which will check the sameness of the thing on the left with the thing on the right. Note sameness is a very fuzzy word, and thus, `===` is also very fuzzy concept, which should be approached with caution in every language.
 
 Here are some cases when equality testing seems reasonable
 
 ```javascript
-  
-  true === true 
+
+  true === true
   //=> true
   false === true
   //=> false
-  
+
   1 === 1
   //=> true
   1 === 2
   //=> false
-  
+
   "hello" === "hello"
   //=> false
-  
+
 ```
 
 
-But here are some cases when it does not. 
+But here are some cases when it does not.
 
 
 ```javascript
-  
+
   {} === {}
   //=> false
   [] === []
   //=> false
-  
-  
+
+
 ```
 
 
@@ -118,22 +118,22 @@ In a language some values can be taken to be `true` or `false`, and we can check
 
   !!(1)
   //=> true
-  
+
   !!(0)
   //=> false
-  
+
   !!(-1)
   //=> true
-  
+
   !!([])
   //=> true
-  
+
   !!({})
   //=> true
-  
+
   !!(null)
   //=> false
-  
+
   !!('')
   //=> false
 ```
@@ -160,7 +160,7 @@ if (num % 2  === 0) {
   *  you can specifiy the `else` block to run if `expr` is `false`
 * `if (expr1) { ... } else if (expr2) { ... } ... else { ... }`
   *  if `expr1` is false then each `else if` expression will be evaluated until one is `true`, and an `else` will be run otherwise.
-  
+
 
 
 ```javascript
@@ -191,27 +191,27 @@ The above example will print `"expr1 is true"` and the `else if` is never reache
 
   ```
   var num = ;// write a number here
-  
+
   // write your conditions here
-  
+
   ```
 
 2. Use conditionals to check if a hardcoded number is divisible by `2` or  `3` and then `console.log` that the number is divisible by two or three.
 
   ```
   var num = ;// write a number here
-  
+
   // write your conditions here
-  
+
   ```
 
 3. Use conditionals to check if a hardcoded `quantity` is `1` or greater than one. If the `quantity`  is one or greater `console.log` either `1 pet` or `quantity + " pets"` respectively.
 
   ```
   var quantity = ;// write a number here
-  
+
   // write your conditions here
-  
+
   ```
 #### Intermediate
 
@@ -221,7 +221,7 @@ The above example will print `"expr1 is true"` and the `else if` is never reache
 
 #### Ternary Operators
 
-Another way to write a very shorthand conditional is using a **ternary operator**, `expr1 ? expr2 : expr3 `. 
+Another way to write a very shorthand conditional is using a **ternary operator**, `expr1 ? expr2 : expr3 `.
 
 ```
 true ? console.log("it is true"): console.log("it is false");
@@ -232,12 +232,12 @@ false ? console.log("it si true"): console.log("it is false");
 
 ### Iterating
 
-It is a way of incrementally repeating a task. Iterating is a way of describing procedures like 
+It is a way of incrementally repeating a task. Iterating is a way of describing procedures like
 
 ```
 print "hello world" 50 times
-``` 
-It is also a way of describing 
+```
+It is also a way of describing
 
 ```
 print each item in a shopping list
@@ -250,11 +250,11 @@ how would I print all vegetables in a shoppping list
 ```
 
 
-Typically iteration has three or four main parts 
+Typically iteration has three or four main parts
 
 * an initial state
 * a condition for repeating
-* process to be run for each repetition 
+* process to be run for each repetition
 * a state change for proceeding to the next step
 
 It isn't surprising that the primary means of iterating in most languages is called a `for` loop, which has the following structure
@@ -288,7 +288,7 @@ for (var index = 0; index < friends.length; index = index + 1) {
 
   ```
     var shoppingList = ["apples", "oranges", "carrots"];
-    
+
     // iterate here
   ```
 
@@ -310,44 +310,44 @@ for (var index = 0; index < friends.length; index = index + 1) {
 
 
 4. Capitalize the first letter in every word in a string, i.e
-  
+
   ```
-  "hello world" => "Hello World"  
-  
+  "hello world" => "Hello World"
+
   ```
 
 5. Find the largest number in a hardcoded array using a for loop. Find the smallest number in a hardcoded array.
 
 
-6. You have a list of numbers below that somehow got shuffled and one is missing. Luckily you know that the numbers were from `1 to 100`. Find the missing number. 
+6. You have a list of numbers below that somehow got shuffled and one is missing. Luckily you know that the numbers were from `1 to 100`. Find the missing number.
 
   ```
-  var numbers = [56, 74, 31, 89, 8, 
+  var numbers = [56, 74, 31, 89, 8,
           22, 5, 19, 28, 100,
-          82, 72, 39, 25, 90, 
-          1, 97, 83, 58, 38, 
-          57, 71, 70, 7, 3, 
-          12, 48, 45, 43, 84, 
-          68, 49, 37, 41, 92, 
-          96, 6, 66, 95, 15, 
-          67, 2, 59, 4, 91, 
-          44, 50, 17, 30, 88, 
-          34, 55, 64, 9, 27, 
-          73, 60, 32, 81, 10, 
-          53, 61, 63, 51, 65, 
-          36, 26, 99, 76, 47, 
-          21, 14, 16, 40, 79, 
-          75, 85, 42, 86, 18, 
-          23, 24, 46, 69, 29, 
-          77, 20, 54, 80, 87, 
-          13, 94, 98, 93, 62, 
+          82, 72, 39, 25, 90,
+          1, 97, 83, 58, 38,
+          57, 71, 70, 7, 3,
+          12, 48, 45, 43, 84,
+          68, 49, 37, 41, 92,
+          96, 6, 66, 95, 15,
+          67, 2, 59, 4, 91,
+          44, 50, 17, 30, 88,
+          34, 55, 64, 9, 27,
+          73, 60, 32, 81, 10,
+          53, 61, 63, 51, 65,
+          36, 26, 99, 76, 47,
+          21, 14, 16, 40, 79,
+          75, 85, 42, 86, 18,
+          23, 24, 46, 69, 29,
+          77, 20, 54, 80, 87,
+          13, 94, 98, 93, 62,
           35, 33, 11, 52];
-          
-          
-          
+
+
+
   ```
-  
-7. Find the `sum` of the values in an array and the `average`. 
+
+7. Find the `sum` of the values in an array and the `average`.
 8. Find the average of only the odd numbers in an array.
 9. Write a loop that creates an array of `100` random integers (not decimal numbers).
 10. Find the numbers in common in two different lists of numbers.
@@ -364,10 +364,10 @@ while (true) {}
 
 This should be enough to break a browser.
 
-In the browser try the [`prompt`](https://developer.mozilla.org/en-US/docs/Web/API/Window.prompt) function out. 
+In the browser try the [`prompt`](https://developer.mozilla.org/en-US/docs/Web/API/Window.prompt) function out.
 
 
-#### Exercise 
+#### Exercise
 
 1. Re-write exercise `1` for `for` loops using a `while` loop.
 2. Use `prompt` and the `while` loop create an array of `5` names.
@@ -378,8 +378,8 @@ In the browser try the [`prompt`](https://developer.mozilla.org/en-US/docs/Web/A
 ### For ... In
 
 
-A `for... in` loop is a way to iterate through an object. Go to [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...in) and read about how to use it. 
+A `for... in` loop is a way to iterate through an object. Go to [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...in) and read about how to use it.
 
 #### Exercise
 
-1. Come up with a use case for the `for ... in` loop and share it with your neighbor. 
+1. Come up with a use case for the `for ... in` loop and share it with your neighbor.

@@ -1,39 +1,111 @@
 
-
 <div class="row">
-  <div class="col-sm-offset-0 col-sm-2 col-xs-offset-1">
+  <div class="col-xs-12 col-sm-3 sidebar">
     <div markdown src="views/partials/outline"></div>
   </div>
-  <div class="col-xs-offset-1 col-xs-10  col-sm-offset-1 col-sm-8 notes">
-    <div class="page-header">
-      <h1>Boostrap</h1>
-      <p>
-        We are going to choose Bootstrap to help us frame our beginner mindset. Boostrap is a natural choice for this because of it's plug and play jQuery libraries. <i>As beginners we want to be able to use and play with technologies we don't full understand</i>. 
-      </p>
+
+  <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-md-offset-2">
+    <div class="row">
+    <div class="col-xs-12 notes">
+      <h2>Bootstrap As A First Project</h2>
+      <div markdown src="notes/bootstrap"></div>
     </div>
-    <h2>Bootstrap Grid</h2>
-    <ul>
-      <li ng-repeat="num in [1, 2, 3, 4]">
-          <h3><a href="notes/layouts_with_bootstrap/concepts_{{num}}.html">Concept {{num}}</a></h3>
-          <pre prism-pre url="getUrl()"></pre>
-      </li>
-    </li>
+
+
+    <div class="col-xs-12 notes">
+
+      <h3>Rows and Columns</h3>
+
+      <p>Inside our container we are going to start adding rows and columns. Rows and columns together create <b>Bootstrap's</b> grid system that developers can use to structure and layout information for the user.
+      </p>
+
+      <ul>
+        <li>
+          <p>So far we have our basic layout</p>
+
+          <pre prism-pre data-src="notes/rows_and_columns/basic_template.html"></pre>
+        </li>
+
+        <li>
+          <p>However we haven't yet added Bootstrap's CSS to our project so lets add the following:</p>
+
+          <pre prism-pre data-src="notes/rows_and_columns/bs_tag.html"></pre>
+        </li>
+        <li>
+          <p>Now let's add our first row and divide it into two columns</p>
+
+          <div class="row example">
+            <div class="col-xs-12">
+              <div class="ex-title">Divide Row Into Halfs</div>
+              <div class="row">
+                <div class="col-xs-6 ex-box">
+                  Hello, World!
+                </div>
+
+                <div class="col-xs-6 ex-box">
+                  My name is Delmer!
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <pre prism-pre data-src="notes/rows_and_columns/halfs.html"></pre>
+        </li>
+      </ul>
+    </div>
+
+
+    <div class="col-xs-12 notes">
+      <h2>JQuery Plugins \w Bootstrap</h2>
+
+      <p>You might assume you need to know jQuery before you can use a jQuery plugin, but this isn't true. To use a jQuery plugin you just need to have <b>jQuery</b> and a basic understanding of how to <b>setup the plugin</b>.</p>
+
+       <p>More understanding of both JavaScript and jQuery will help you become more aware of what you can do, but you can go for with a very high level understanding.</p>
+
+      <h3>Using Dropdown.js</h3>
+
+      <p>Dropdown JS is just a plugin that allows you add dropdown menus<p>
+
+      <a href="examples/plugins/dropdown.html">Dropdown</a>
+      <pre prism-pre data-src="examples/plugins/dropdown.html"></pre>
+
+      <h3><a href="examples/plugins/collapse.html">Using Collapse</a></h3>
+
+      <p>Collapse hides/shows specified content using data attibutes.<p>
+
+      <pre prism-pre data-src="examples/plugins/collapse.html"></pre>
+
+      <h4><a href="examples/plugins/navbar_collapse.html">Using Navbar Collapse</a></h4>
+
+      <p>Collapses navbar content for mobile devices.<p>
+
+      <pre prism-pre data-src="examples/plugins/navbar_collapse.html"></pre>
+
+    </div>
+
+
+    <div class="col-xs-12 notes">
+      <div class="page-header">
+        <h1>More Grid Examples</h1>
+        <p>
+          We are going to choose Bootstrap to help us frame our beginner mindset. Boostrap is a natural choice for this because of it's plug and play jQuery libraries. <i>As beginners we want to be able to use and play with technologies we don't full understand</i>.
+        </p>
+      </div>
+      <h2>Bootstrap Grid</h2>
+      <ul>
+        <li ng-repeat="num in [1, 2, 3, 4]">
+            <h3><a href="notes/layouts_with_bootstrap/concepts_{{num}}.html">Concept {{num}} Recap</a></h3>
+            <pre prism-pre url="getUrl()"></pre>
+        </li>
+      </ul>
+    </div>
+
+    <div class="col-xs-offset-1 col-xs-10 notes">
+      <div markdown src="notes/layouts_with_bootstrap/README"></div>
+    </div>
+    </div>
   </div>
 </div>
 
-<div class="row">
-  <div class="col-xs-offset-1 col-xs-10 notes">
-    <div markdown src="notes/layouts_with_bootstrap/README"></div>
-  </div>
-</div>
 
-<div class="row">
-  <div class="col-xs-offset-1 col-xs-10 notes">
-    <h2>Adding Bootstrap.js</h2>
-    <div markdown src="notes/bootstrap"></div>
-    <p>
-      Assuming we've already downloaded `jQuery` and `Bootstrap` we can add the scripts we'll need for bootstrap by doing the following.
-    </p>
-    <pre prism-pre data-src="notes/bootstrap_js.html"></pre>
-  </div>
-</div>
