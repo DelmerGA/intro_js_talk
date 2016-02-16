@@ -1,47 +1,56 @@
 $(function (event) {
-    // Initialize a new plugin instance for all
-    // e.g. $('input[type="range"]') elements.
-    $('input[type="range"]').rangeslider();
+  alert('hello')
+  // Initialize a new plugin instance for all
+  // e.g. $('input[type="range"]') elements.
+  $('input[type="range"]').rangeslider({ polyfill: true});
+
   var red   = 0;
   var green = 0;
   var blue  = 0;
 
   var $resultBox = $('#resultBox');
 
-  var $redInput = $('#redInput');
+  var $redRange = $('#redRange');
 
-  $redInput.on('change', function (pos, val) {
+  function chooseRed(pos, val) {
       var $redishBox = $('#redBox');
 
-      red = $redInput.val()
+      red = $redRange.val();
 
       $redishBox.css('backgroundColor', 'rgb(' + red + ', 0, 0)');
 
       $resultBox.css('backgroundColor', 'rgb(' + red + ',' + green + ',' + blue + ')');
-  });
+  }
 
-  var $greenInput = $('#greenInput');
+  $redRange.on('change', chooseRed);
 
-  $greenInput.on('slide', function (pos, val) {
+  var $greenRange = $('#greenRange');
+
+  function chooseGreen(pos, val) {
       var $greenishBox = $('#greenBox');
 
-      green = $greenInput.val()
+      green = $greenRange.val();
 
       $greenishBox.css('backgroundColor', 'rgb(0,' + green + ', 0)');
 
       $resultBox.css('backgroundColor', 'rgb(' + red + ',' + green + ',' + blue + ')');
-  });
+  }
+
+  $greenRange.on('change', chooseGreen);
 
 
-  var $blueInput = $('#blueInput');
+  var $blueRange = $('#blueRange');
 
-  $blueInput.on('slide', function (pos, val) {
+  function chooseBlue(pos, val) {
       var $blueishBox = $('#blueBox');
 
-      blue = $blueInput.val();
+      blue = $blueRange.val();
 
       $blueishBox.css('backgroundColor', 'rgb(0,0,' + blue + ')');
 
       $resultBox.css('backgroundColor', 'rgb(' + red + ',' + green + ',' + blue + ')');
-  });
+  }
+
+  $blueRange.on('change', chooseBlue);
+
 });
