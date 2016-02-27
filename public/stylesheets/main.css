@@ -1,5 +1,7 @@
 body {
+  position: relative;
   background-color: #95a5a6;
+  height: 100%;
 }
 .jumbotron {
   background-color:  #95a5a6;

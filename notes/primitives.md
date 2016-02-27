@@ -24,37 +24,38 @@
   * Reference Types
   * Undefined
   * False
-  * Javascript Object Literal 
+  * Javascript Object Literal
 
 
 ## Comments
 
-Comments come in two forms 
+Comments come in two forms
 
   * line comments
-  
+
    ```
    // descriptive stuff
    ```
   * multiline comments
-  
+
   ```
   /**
-    These 
+    These
     are
     comments on
     many lines
   */
-  
+
   ```
-## Numbers 
+
+## Numbers
 
 Numbers are one of the *types* of **values** we want to be able to interact and play with in JS.
 
 * Integers
 
   ```
-   ..., -1,0, 2, 3, 4, 5, ... 
+   ..., -1,0, 2, 3, 4, 5, ...
   ```
 * Floats (or Decimal numbers)
 
@@ -78,22 +79,33 @@ Strings are collections of letters and symbols known as **Characters**, and we u
 
 Types of values like `Number` or `String` are not very useful without being able to form **Expressions** or **Combinations**.
 
-Try your favorite number operators
+* Try your favorite number operators
 
-```
-  1 + 1
+  ```
+  1 + 1;
   => 2
-  2 - 1
+  2 - 1;
   => 1
-```
-You can also create expressions with strings using addition
+  (1 + 2 + 2)*2;
+  => 10
+  ```
 
-```
-  "Hello, " + "world!"
+* You can suprise yourself sometimes...
+
+  ```
+  0.2 + 0.1;
+  => ?
+  ```
+
+
+* You can also create expressions with strings using addition
+
+  ```
+  "Hello, " + "world!";
   => "Hello, world!"
-```
+  ```
 
-This is called **String Concatentation.**
+  This is called **String Concatentation.**
 
 
 ### Special Number Operators
@@ -102,43 +114,43 @@ Javascript can be a little cheap with the number of operations it allows you to 
 
 * Taking a number to some `power`? Then just use `Math.pow`
 
-```
-// 3^2 becomes
-Math.pow(3,2)
-=> 4
-// 2^4 becomes
-Math.pow(2,4)
-=> 16
-```
+  ```
+  // 3^2 becomes
+  Math.pow(3,2);
+  => 9
+  // 2^4 becomes
+  Math.pow(2,4);
+  => 16
+  ```
 * Taking a square root
 
-```
-// √(4) becomes
-Math.sqrt(4)
-=> 2
-```
+  ```
+  // √(4) becomes
+  Math.sqrt(4);
+  => 2
+  ```
 * Need a `random` number? Then use `Math.random`.
 
-```
-// The following only returns a random decimal
-Math.random()
-=> .229375290430
-/** 
-  The following will return a 
-  random number between 0 and 10
-*/
-Math.random()*10
-```
+  ```
+  // The following only returns a random decimal
+  Math.random();
+  => .229375290430
+  /**
+    The following will return a
+    random number between 0 and 10
+  */
+  Math.random()*10;
+  ```
 
 * Since Numbers can be **Floats** or **Integers** we often want to get rid of remaining decimal places, which can be done using `Math.floor`.
 
-```
-// Remove the decimal
-Math.floor(3.14)
-=> 3
-Math.floor(3.9999)
-=> 3
-```
+  ```
+  // Remove the decimal
+  Math.floor(3.14);
+  => 3
+  Math.floor(3.9999);
+  => 3
+  ```
 
 ## Variables and Keywords
 
@@ -148,7 +160,7 @@ Having made some expressions it becomes evident we want to store these values.
 var myNumber = 1;
 // or also
 
-var myString = "Greetings y'all!"
+var myString = "Greetings y'all!";
 ```
 
 The main note to make here is that these variables should always have the `var` keyword and use `camelCase`
@@ -157,47 +169,54 @@ The main note to make here is that these variables should always have the `var` 
 
 In Javascript we just discussed two types of values we can use. We call these values objects, which for now just means that in addition to storing some data you also get to use some helpful methods when you are working with them.
 
-* If you want to turn a number into a string you can use a helpful method called `toString`.
+* If you want to turn a number into a string you can use a helpful method
+  called `toString`.
 
-```
-(1).toString()
-=> "1"
-/**
-  be careful though,
-  since numbers can be floats
-  javascript might
-  misunderstand you.
-*/
-1.toString()
-=> Float Error
-// but the following works
-1..toString()
-```
+  You can convert a **Number** to a **String**
 
-### Arrays 
+  ```
+  (1).toString();
+  => "1"
+  ```
 
-Unfortunately, strings and numbers are not enough for most programming purposes. 
-What is needed are collections of data that we can use efficiently, Arrays.
+  Be careful though, since numbers can be floats JavaScript might
+  **misunderstand you**.
+
+  ```
+  1.toString();
+  => Float Error
+  ```
+
+  But, the following works?
+
+  ```
+  1..toString();
+  ```
+
+### Arrays
+
+Unfortunately, strings and numbers are not enough for most programming purposes.
+What is needed are collections of data that we can use efficiently, **Arrays**.
 
 Arrays are great for:
 
 * Storing data
 * Enumerating data, i.e. using an index to find them.
-* Quickly reordering data 
+* Quickly reordering data
 
 ```
 var friends = ['Moe', 'Larry', 'Curly'];
 => ['Moe', 'Larry', 'Curly']
 ```
 
-Items in an array are stored in sequential order, and indexed starting at `0` and ending at `length - 1`.
+**Items** or **values** in an array are stored in sequential order, and indexed starting at `0` and ending at `length - 1`.
 
 ```
 // First friend
 var firstFriend = friends[0];
  => 'Moe'
 // Get the last friend
-var lastFriend = friends[2]
+var lastFriend = friends[2];
 => 'Curly'
 ```
 
@@ -205,120 +224,177 @@ var lastFriend = friends[2]
 
 ```
 var friend = "bobby bottleservice";
+
 // pick out first character
+
 friend[0]
 //=> 'b'
+
 friend.length
+//=> 19
 ```
 
 ### Exercises
 
-1.) Find the last name in the following array:
+This section is *a little tough* and you won't everything you need to complete
+it. This is by design. The hope is that you'll go searching for the **right
+tools** to help you get it done. If you look through **Google** results try to
+stick to **MDN** resources.
 
-```
-var friends = [
-                'Moe', 
-                'Larry', 
-                'Curly',
-                'Jane',
-                'Emma',
-                'Elizabeth',
-                'Elinor',
-                'Mary',
-                'Darcy',
-                'Grey',
-                'Lydia',
-                'Harriet'
-              ];
-```
+1.) Try the following with the `friends` array.
 
-Add your name to the end of the `friends` and add another name to beginning. Change the `Elizabeth` to `Liz`.
+  * Find the *last* name in the array. How would turn this into a relavant
+ question?
+    * *How do you find the **last item** in an **array**?*
+    * Hint: Try Googling: **last item array JavaScript**.
+  * Add your name to the end of  `friends`.
+  * Add another name to beginning.
+  * Change the `Elizabeth` to `Liz`.
 
-**2.**) Go to MDN and lookup `Array.sort`. Sort the list of `friends` above
+  ```
+  var friends = [
+      'Moe',
+      'Larry',
+      'Curly',
+      'Jane',
+      'Emma',
+      'Elizabeth',
+      'Elinor',
+      'Mary',
+      'Darcy',
+      'Grey',
+      'Lydia',
+      'Harriet'
+  ];
+  ```
 
-**3.**) Challenge Problem: Here are a list of `ages`
+**2.**) Go to **MDN** and lookup `Array.sort`. Sort the list of `friends` above
 
-```
-var ages = [83, 53, 37, 29, 60, 30, 66, 19, 59, 41, 9, 64, 19, 80, 24, 53, 70, 1, 53, 40, 92, 4, 71, 65, 8, 2, 51, 80, 94, 37, 80, 64, 19, 6, 14];
+**3.**) Challenge Problem:
 
-```
 
-find the `median` age. Note: the median is the middle index of the sorted array. (Hint: Lookup up on MDN `Array.sort` for numbers, and use the length of the Ages.)
+* Find the `median` age in the following `ages` array.
+  * **Note**: the **median** is the **middle index** of the **sorted** array.
+* **CLUE**: Try `ages.sort()` in your console.
+  * Does that work? (It doesn't.)
+  * How do you sort arrays of **numbers** in JavaScript then?
+  * **Hint**: Lookup up on **MDN** the `Array.sort` for **numbers**, and use the
+   length of the Ages.
 
-4.) There are a list of names in a string, below. How could we sort them? Hint: use string and array methods.
- 
-```
-var friends = "Moe,Larry,Curly,Jane,Emma,Elizabeth,Elinor,Mary,Darcy,Grey,Lydia,Harriet";
-```
+  ```
+  var ages = [
+      83,
+      53,
+      37,
+      29,
+      60,
+      30,
+      66,
+      19,
+      59,
+      41,
+      9,
+      64,
+      19,
+      80,
+      24,
+      53,
+      70,
+      1,
+      53,
+      40,
+      92,
+      4,
+      71,
+      65,
+      8,
+      2,
+      51,
+      80,
+      94,
+      37,
+      80,
+      64,
+      19,
+      6,
+      14
+  ];
+  ```
 
-5.) List all the `friends` above in reverse alphabetical order.
+4.) There are a list of names in a string, below.
+
+* How could we sort them? Hint: use string and array methods.
+* List all the `friends` in reverse alphabetical order.
+
+  ```
+  var friends = "Moe,Larry,Curly,Jane,Emma,Elizabeth,\
+    "Elinor,Mary,Darcy,Grey,Lydia,Harriet";
+  ```
+
 
 6.) We have two lists of friends below:
 
-```
-var myFriends = [
-                  'Rickon',
-                  'Meera',
-                  'Hodor',
-                  'Jojen',
-                  'Osha',
-                  'Rickard',
-                  'Maester',
-                  'Rodrik',
-                  'Jory',
-                  'Septa',
-                  'Jon'
-                ];
+  * How would we combine them into one list and sort them.
 
-var yourFriends = [
-                    'Bilbo',
-                    'Boromir',
-                    'Elrond',
-                    'Faramir',
-                    'Frodo',
-                    'Gandalf',
-                    'Legolas',
-                    'Pippin'
-                  ];
-```
+  ```
+  var myFriends = [
+      'Rickon',
+      'Meera',
+      'Hodor',
+      'Jojen',
+      'Osha',
+      'Rickard',
+      'Maester',
+      'Rodrik',
+      'Jory',
+      'Septa',
+      'Jon'
+  ];
 
-we need to combine them into one list and sort them.
+  var yourFriends = [
+      'Bilbo',
+      'Boromir',
+      'Elrond',
+      'Faramir',
+      'Frodo',
+      'Gandalf',
+      'Legolas',
+      'Pippin'
+  ];
+  ```
 
-7.) I have a list of favorite foods below. If `Popcorn` is my favorite food and `Potato chips` my second favorite, then how would you find the rank of another food. Try `Pho`. Hint: go to MDN to find an array method for finding the index of something in the array.
+7.) I made a mistake with my favorite foods.
 
+* How can I find the index of `Donuts` and remove it?
+* **(Hint: look up `splice`)**
 
-```
+  ```
+  var foods = [
+      'Popcorn',
+      'Potato chips',
+      'Shrimp',
+      'Chicken rice',
+      'Poutine',
+      'Tacos',
+      'Toast',
+      'French Toast',
+      'Crab',
+      'Pho',
+      'Lasagna',
+      'Brownie',
+      'Lobster',
+      'Donuts',
+      'Ice cream',
+      'Hamburger',
+      'Sushi',
+      'Chocolate',
+      'Pizza'
+  ];
+  ```
 
-var foods = [
-              'Popcorn',
-              'Potato chips',
-              'Shrimp',
-              'Chicken rice',
-              'Poutine',
-              'Tacos',
-              'Toast',
-              'French Toast',
-              'Crab',
-              'Pho',
-              'Lasagna',
-              'Brownie',
-              'Lobster',
-              'Donuts',
-              'Ice cream',
-              'Hamburger',
-              'Sushi',
-              'Chocolate',
-              'Pizza'
-            ];
+8.) My friends want to know what my `5`th to `10`th favorite foods are.
 
-```
-
-
-8.) I made a mistake with my favorite foods. How can I find the index of `Donuts` and remove it? **(Hint: look up `splice`)**
-
-9.) My friends want to know what my `5`th to `10`th favorite foods are.
-
-10.) How would you create an array that efficiently stored the following information:
+9.) How would you create an array that efficiently stored the following information:
 
 ```
   'Moe' is 18
@@ -341,23 +417,21 @@ var foods = [
 Why use objects to store `key` and `value` pairs? They are like arrays except that  data is not stored in any sorted order and keys do not have to numbered indexes.
 
 
-#### creating
-
-
-```
-var friend = {name: "john"}
+#### Creating
 
 ```
-
-#### accessing
-
+var friend = { name: 'john' };
 
 ```
-friend[name]
+
+#### Accessing
+
+```
+friend['name'];
+//=> 'john'
 ```
 
 ### Exercise
-
 
 1.) How would you represent the following using an object literal. Then update `john's` address to `1234 Park ln`.
 
@@ -388,7 +462,7 @@ John, Doe, 36, 1234 Park st.
 
 ```
 
-### RegEx
+### RegExp
 
 ### Convenient Methods
 

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Scrollspy</title>
+
+  <link rel="stylesheet" href="public/bootstrap/css/bootstrap.css">
+
+  <script src="public/jquery/jquery.js"></script>
+
+  <script src="public/bootstrap/js/bootstrap.js"></script>
+
+  <script type="text/javascript">
+   $(function (){
+     // $('#content').scrollspy({ target: '#contentNav' })
+   })
+  </script>
+  <style type="text/css">
+      #contents {
+        height: 500px;
+        overflow-y: scroll;
+        border:  solid 1px blue;
+      }
+
+      #contentNav {
+        border: solid 1px red;
+      }
+
+      #content {
+        height:     5000px;
+        border:     solid 1px black;
+      }
+
+      .section {
+        height: 500px;
+      }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="jumbotron">
+      <h1>Hello world</h1>
+    </div>
+    <div id="contents" class="row">
+
+      <div id="contentNav" class="col-sm-2" data-spy="affix">
+        <ul class="nav">
+          <li><a href="#section1">Example One</a></li>
+          <li><a href="#section2">Example Two</a></li>
+        </ul>
+      </div>
+
+      <div id="content" class="col-sm-9 col-sm-offset-3">
+        <div id="section1" class="section">
+          <h1>Example One</h1>
+          <p class="section-content">Hello world</p>
+        </div>
+
+        <div id="section2" class="section">
+          <h1>Example Two</h1>
+          <p class="section-content">Hello world</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
